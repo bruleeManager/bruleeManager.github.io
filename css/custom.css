@@ -85,3 +85,8 @@ input[type="email"]{
     border-color: white;
     background-color: white;
 }
+
+.form{
+  width: 60%;
+  text-align: center;
+}
