@@ -47,7 +47,7 @@
         $('#loading').toggle();
 
         var urlcheck_license = "https://brulee.io/?edd_action=check_license&item_name=Supreme%20Ext&license=" + $('#license').val().trim() + "&url=" + $('#cue').val().trim();
-        $.post(urlcheck_license,function(res){
+        $.getJSON(urlcheck_license,function(res){
 
             if (res.license === 'invalid'){
                 $('#error').text('license invalid, please try again or contact the support team.');
@@ -59,7 +59,7 @@
                 console.log( 'site_inactive');
             }else{
                 var url = "https://brulee.io/?edd_action=deactivate_license&item_name=Supreme%20Ext&license=" + $('#license').val() + "&url=" + $('#cue').val();
-                $.post(url,function(dres){
+                $.getJSON(url,function(dres){
                   if(dres.success === true && dres.license === 'deactivated'){
                       $('#success').show();
                       console.log('successful deactivate ');
