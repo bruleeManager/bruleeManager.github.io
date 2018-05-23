@@ -1,5 +1,5 @@
 const chromep = new ChromePromise();
-itemName = `item_name=${encodeURIComponent("Supreme Ext")}`;
+itemName = `item_name=${encodeURIComponent("Brulee Supreme Bot")}`;
 
 
 class ActivationManager {

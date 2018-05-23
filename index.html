@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <div class="container" style="margin-top:15% ; text-align:center">
+    <div class="container" style="margin-top:10% ; text-align:center">
         <img src="logo.png" alt="Smiley face" height="80" width="80" id="logo" style="margin-top: 15px">
         <h3>Brulee License Manager</h3>
         <input class="form" id="license" name="profileName" placeholder="License" type="text" style="margin-top:40px"/>
@@ -48,7 +48,7 @@
         $('#deactivate').toggle();
         $('#loading').toggle();
 
-        var urlcheck_license = "https://brulee.io/?edd_action=check_license&item_name=Supreme%20Ext&license=" + $('#license').val().trim() + "&url=" + $('#cue').val().trim();
+        var urlcheck_license = "https://brulee.io/?edd_action=check_license&item_name=Brulee%20Supreme%20Bot&license&license=" + $('#license').val().trim() + "&url=" + $('#cue').val().trim();
         $.getJSON(urlcheck_license,function(res){
 
             if (res.license === 'invalid'){
@@ -60,7 +60,7 @@
                 $('#error').show();
                 console.log( 'site_inactive');
             }else{
-                var url = "https://brulee.io/?edd_action=deactivate_license&item_name=Supreme%20Ext&license=" + $('#license').val() + "&url=" + $('#cue').val();
+                var url = "https://brulee.io/?edd_action=deactivate_license&item_name=Brulee%20Supreme%20Bot&license&license=" + $('#license').val() + "&url=" + $('#cue').val();
                 $.getJSON(url,function(dres){
                   if(dres.success === true && dres.license === 'deactivated'){
                       $('#success').show();
